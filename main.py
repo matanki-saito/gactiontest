@@ -1,6 +1,7 @@
 import spacy
 import sys
 import os
+import subprocess
 
 # https://note.com/npaka/n/n6fa359ac611c
 # システム辞書のパス
@@ -11,6 +12,9 @@ for path in sys.path:
         sys_dic_path = path
         break
 print('sys_dic_path:', sys_dic_path)
+
+# ユーザ辞書の作成
+subprocess.run("sudachipy ubuild -s "+ sys_dic_path + " " + os.getcwd()+'/user.dic')
 
 # ユーザー辞書のパス
 user_dic_path = os.getcwd()+'/user.dic'
