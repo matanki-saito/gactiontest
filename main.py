@@ -1,5 +1,5 @@
 import spacy
-nlp = spacy.load('ja_ginza_electra')
+nlp = spacy.load('ja_ginza')
 doc = nlp('銀座でランチをご一緒しましょう。')
 for sent in doc.sents:
     for token in sent:
