@@ -1,6 +1,7 @@
 import spacy
+
 nlp = spacy.load('ja_ginza')
-doc = nlp('銀座でランチをご一緒しましょう。')
+doc = nlp(u'銀座でランチをご一緒しましょう。')
 for sent in doc.sents:
     for token in sent:
         print(
@@ -15,5 +16,5 @@ for sent in doc.sents:
             token.dep_,
             token.head.i,
         )
-    print('EOS')
+    print(u'EOS')
 
