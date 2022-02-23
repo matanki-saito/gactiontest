@@ -14,7 +14,7 @@ for path in sys.path:
 print('sys_dic_path:', sys_dic_path)
 
 # ユーザ辞書の作成
-subprocess.run("sudachipy ubuild -s "+ sys_dic_path + " " + os.getcwd()+'/user.dic')
+subprocess.run("sudachipy ubuild -s "+ sys_dic_path + " " + os.getcwd()+'/userdic.csv')
 
 # ユーザー辞書のパス
 user_dic_path = os.getcwd()+'/user.dic'
